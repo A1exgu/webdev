@@ -1,0 +1,128 @@
+submit<!--
+  #1: I can see a title with id="title" in H1 sized text.
+  #2: I can see a short explanation with id="description" in P sized text.
+  #3: I can see a form with id="survey-form".
+  #4: Inside the form element, I am required to enter my name in a field with id="name".
+  #5: Inside the form element, I am required to enter an email in a field with id="email".
+  #6: If I enter an email that is not formatted correctly, I will see an HTML5 validation error.
+  #7: Inside the form, I can enter a number in a field with id="number".
+  #8: If I enter non-numbers in the number input, I will see an HTML5 validation error.
+  #9: If I enter numbers outside the range of the number input, which are defined by the min and max attributes, I will see an HTML5 validation error.
+  #10: For the name, email, and number input fields inside the form I can see corresponding labels that describe the purpose of each field with the following ids: id="name-label", id="email-label", and id="number-label".
+  #11: For the name, email, and number input fields, I can see placeholder text that gives me a description or instructions for each field.
+  #12: Inside the form element, I can select an option from a dropdown that has a corresponding id="dropdown".
+  #13: Inside the form element, I can select a field from one or more groups of radio buttons. Each group should be grouped using the name attribute.
+  #14: Inside the form element, I can select several fields from a series of checkboxes, each of which must have a value attribute.
+  #15: Inside the form element, I am presented with a textarea at the end for additional comments.
+  #16: Inside the form element, I am presented with a button with id="submit" to submit all my inputs.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title >Tribute to King David</title>
+  <link href="My_Survey_Form.css" rel="stylesheet" type="text/css"/>
+</head>
+
+<body>
+  <div class="container"> 
+    <div id="main">
+      <h1 id="title"> Survey Form </h1>
+      <p id="description" class="description">Create an account with us and see history of your orders</p></div>
+  
+    <main>
+    <!--Name -->
+      <div>
+        <form id="survey-form" action="/submit-survey-form">
+          <label id="name-label" for="name">Name & surename</label><br/>
+          <input id="name" type="text" name="name" size="50" placeholder="Enter your name" required=""><br/>
+      
+      <!--Email div-->
+      
+        <label id="email-label" for="email" > Email</label><br/>
+          <input id="email" type="email" name="email" size="50" placeholder="Enter Your Email Adress" required><br/>
+    
+    <!-- Age -->
+        <label id="number-label" for="number">Age (optional)</label><br/>
+        <input id="number" type="number" name="age" size="50" min="12" max="120" placeholder="Enter your age (optional)" required>
+
+        <label class="container">
+                    <p><h3>Please answer the following questions:</h3></p>
+        <!-- dropdown -->
+            <div class="form-group">
+                <p>Overall, how satisfied or dissatisfied you are with our services?</p>
+                <select id="dropdown" name="experiance">
+                    <option disabled="" selected="" value="" >Please make a selection</option>
+                    <option value="exciting">Very satisfied</option>
+                    <option value="experiance">Somewhat satisfied</option>
+                    <option value="food">Neither satisfied nor disatisfied</option>
+                    <option value="service">Great Service</option>
+                    <option value="surver">Somewhat disatisfied</option>
+                    <option value="foodWasgood"> Very disatisfied</option>
+                </select>
+            </div><br>
+                    <p>How responsive have we been to your requests and concerns about cleaning services?</p>
+                    <!-- radio buttons-->
+                    <label class="container">
+                      <div class="respons">
+                        <p class="check"> <input name="user-input" value="Yes" type="radio" checked>  Responsive </p>
+
+                        <p class="check"> <input name="user-input" value="No" type="radio" checked>  Not so responsive </p>
+
+                        <p class="check"> <input name="user-input" value="Not aplicable" type="radio" checked>  Not aplicable </p>
+                      </div>
+                    </label>
+
+                    <p>Will you recomend us to your friends?</p>
+                    <label class="container">
+                      <div class="respons">
+                        <p class="check"> <input name="user-input" value="Yes" type="radio" checked>  Yes </p>
+                        <p class="check"> <input name="user-input" value="No" type="radio" checked>  No </p>
+                      </div>
+                    </label>
+                    <!-- checkboxes-->
+                    <div class="container">
+
+                    
+                        <p>Which of the following would best describe our cleaning services?</p>
+                        <label  for="checkbox">
+                            <input type="checkbox" class="square-checkbox" name="any" value="High quality">  High quality
+                        </label>
+                        <label  for="checkbox">
+                            <input type="checkbox" class="square-checkbox" name="any" value="Good value for money">
+                            Good value for money
+                        </label>
+                        <label  for="checkbox">
+                            <input type="checkbox" class="square-checkbox" name="any" value="Overpriced">  Overpriced
+                        </label>
+                        <label  for="checkbox">
+                            <input type="checkbox" class="square-checkbox" name="any" value="Poor quality">  Poor quality
+                        </label>
+                        <label  for="checkbox">
+                            <input type="checkbox" class="square-checkbox" name="any" value="Reliable">  Reliable
+                        </label>
+                        <label  for="checkbox">
+                            <input type="checkbox" class="square-checkbox" name="any" value="Unreliable">  Unreliable
+                        </label>
+                        <label  for="checkbox">
+                            <input type="checkbox" class="square-checkbox" name="any" value="Usefull">  Useful
+                        </label>
+                        <label  for="checkbox">
+                            <input type="checkbox" class="square-checkbox" name="any" value="Impractical">  Impractical
+                        </label>
+                    </div>
+                    <!--Suggestion Box-->
+                    <div class="comment-box">
+                      <br/><p>Do you have any suggestions, comments, questions or concerns?</p>
+                      <textarea class="input-comment" name="comments" id="comments" cols="70" rows="10" placeholder="Please, enter your comment here"></textarea>
+                
+                      <button class="submitbutton" id="submit" type="submit" > Submit</button>
+                    </div>
+        </form>
+  </div></main>
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    
+</body><br/>
+<footer>2020 Survey form</footer>
+
+</html>
